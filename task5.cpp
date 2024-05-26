@@ -12,7 +12,7 @@ void xorshift(uint32_t& value, vector<uint32_t>& PsevdRand) {
 
 int main() {
     vector<uint32_t> PsevdRand;
-    uint32_t value = 123456789;
+    uint32_t value = 1234567890;
     for (int i = 0; i < 10; i++) {
         xorshift(value, PsevdRand);
     }
