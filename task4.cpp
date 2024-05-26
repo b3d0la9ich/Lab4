@@ -31,7 +31,7 @@ bool randomChoice(int round_number, vector<bool> self_choices, vector<bool> enem
 
 void printResults(int& algorithm1_score, int& algorithm2_score, int& algorithm3_score) {
     cout << "randomChoice: " << algorithm1_score << endl;
-    cout << "adaptiveRandomChoice: " << algorithm2_score << endl;
+    cout << "titForTat: " << algorithm2_score << endl;
     cout << "alwaysCooperate: " << algorithm3_score << endl;
 }
 
