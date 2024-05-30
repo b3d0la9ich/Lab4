@@ -35,7 +35,7 @@ double expectedExp(const vector<int>& vec) { // ожидаемое матема�
     for (int n : vec) {
         sum += n;
     }
-    return sum / 125.0;
+    return sum / 50.5;
 }
 
 double Dispersion(const vector<int>& vec) {
@@ -56,7 +56,7 @@ double chiKv(const vector<int>& vec) {
     double mathReal = realExp(vec);
     double Dispers = sqrt(Dispersion(vec));
 
-    for (int i = 1; i <= 125; i++) {
+    for (int i = 1; i <= 50.5; i++) {
         double realIncidence = CountEl(vec, i);
         double expIncidence = vec.size() * (Laplas((i - mathReal) / Dispers) - Laplas((i - 1 - mathReal) / Dispers));
         result += pow(realIncidence - expIncidence, 2) / expIncidence;
@@ -71,7 +71,7 @@ int main() {
     randomFill(vector100);
     randomFill(vector1000);
 
-    double crit = 156.69; // Для 125 ст. своб. и ур. знач 0,05
+    double crit = 50.5; 
 
     // 50 значений
     double chiKvZnach = chiKv(vector50);
