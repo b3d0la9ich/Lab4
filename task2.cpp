@@ -28,6 +28,7 @@ void newMass(const vector<int>& rand1, const vector<int>& rand2, vector<int>& Ne
 }
 
 int main() {
+    system("chcp 65001");
     //1-2
     int N = 10;
     vector<int> randNum;
@@ -35,8 +36,8 @@ int main() {
     sort(randNum.begin(), randNum.end());
     cout << "Массив с случайными значениями: ";
     for (int n : randNum) {
-        cout << n << " ";
-    }
+        cout << n << " " << endl;
+    } 
     cout << endl;
     cout << "Второй по величине элемент: " << randNum[N-2] << endl;
     int sum = 0;
@@ -85,7 +86,7 @@ int main() {
     cin >> a >> b;
     vector<int> visokYears;
     for (int i = a; i <= b; i++) {
-        if (i%4 == 0) {
+        if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0)) {
             visokYears.push_back(i);
         }
     }
